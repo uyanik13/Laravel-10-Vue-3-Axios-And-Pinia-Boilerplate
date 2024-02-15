@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    --breakpoint-grid_auto-rows: minmax(200px, 1fr);
+    --breakpoint-grid_row-gap: 16px;
+    --breakpoint-grid_column-gap: 16px;
+    --breakpoint-grid_columns: 1;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-gray-800 mobile:text-2xl dark:text-white;
+  }
+
+  h2 {
+    @apply text-2xl font-bold text-gray-800 mobile:text-xl dark:text-white;
+  }
+
+  h3 {
+    @apply text-xl font-bold text-gray-800 mobile:text-lg dark:text-white;
+  }
+
+  h4 {
+    @apply text-base font-bold text-gray-800 mobile:text-md dark:text-white;
+  }
+
+  h5 {
+    @apply text-lg font-semibold text-gray-800 mobile:text-sm dark:text-white;
+  }
+
+  h6 {
+    @apply text-base font-semibold text-gray-800 mobile:text-xs dark:text-white;
+  }
+  
+  .theme-button {
+    @apply flex items-center justify-center w-full text-sm font-bold text-white transition duration-500 border-2 rounded-full bg-primary border-primary hover:shadow-lg hover:shadow-black desktop:py-3 mobile:py-2 tablet:py-2;
+  }
+  .theme-button-2 {
+    @apply flex items-center justify-center w-full text-sm font-bold text-black transition duration-500 bg-white border-2 border-black rounded-full hover:shadow-lg hover:shadow-black desktop:py-3 mobile:py-2 tablet:py-2;
+  }
+  
+  .form-input {
+    @apply p-2 m-0 py-1.5  w-full min-h-fit max-h-96 rounded-md bg-gray-100 border border-gray-400 text-gray-800 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-200 dark:placeholder:text-gray-400;
+  }
+  
+  .form-div {
+    @apply flex space-x-2 tablet:flex-col mobile:flex-col mobile:space-y-2 mobile:space-x-0 tablet:space-y-2 tablet:space-x-0 desktop:space-y-0 desktop:space-x-2;
+  }
+  
+  .form-input-with-label {
+    @apply flex tablet:flex-col desktop:flex-col mobile:flex-col mobile:w-full desktop:w-1/2;
+  }
+
+
+
+.header-ul {
+  @apply flex flex-col desktop:flex-row desktop:space-x-2;
+}
+
+.header-li {
+  @apply flex items-center px-2 py-2 space-x-1 cursor-pointer text-dark dark:text-light desktop:text-md mobile:text-5 mobile:font-bold mobile:space-x-3 mobile:mb-2;
+}
+
+
+.header-li.active,
+.header-li:hover {
+  @apply px-2 pb-2 rounded-md text-light dark:text-dark bg-primary mobile:mb-2;
+}
+
+.header-submenu-li {
+  @apply flex items-center w-full gap-x-3.5 py-2 px-3 rounded-md text-sm text-gray-800 hover:bg-gray-100 focus:ring-2 focus:ring-blue-500 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-300;
+}
