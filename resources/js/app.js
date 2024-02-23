@@ -8,7 +8,16 @@ import { createNotivue } from 'notivue'
 import 'notivue/notifications.css' // Only needed if using built-in notifications
 // import 'notivue/animations.css' // Only needed if using built-in animations
 
-const notivue = createNotivue(/* options */)
+const notivue = createNotivue({
+    position: 'top-right',
+    limit: 4,
+    enqueue: true,
+    notifications: {
+      global: {
+        duration: 2500
+      }
+    }
+  })
 // const pinia = createPinia()
 const app = createApp(App);
 app.use(Router);
