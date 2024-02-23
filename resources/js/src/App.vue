@@ -3,10 +3,15 @@
 		<router-view />
 	</main>
 	<Notivue v-slot="item">
-		<Notification :item="item" />
+		<NotivueSwipe :item="item">
+			<Notification
+				:item="item"
+				:theme="materialTheme"
+			/>
+		</NotivueSwipe>
 	</Notivue>
 </template>
 <script setup lang="ts">
-import { Notivue, Notification } from 'notivue';
+import { Notivue, Notification, NotivueSwipe, materialTheme } from 'notivue';
 </script>
 
