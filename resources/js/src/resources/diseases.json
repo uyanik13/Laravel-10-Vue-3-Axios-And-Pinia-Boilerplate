@@ -1,0 +1,140 @@
+[
+    {
+        "name": "Blood Cancer",
+        "category": "Cancer",
+        "description": "A type of cancer that affects the blood, bone marrow, and lymphatic system, causing abnormal growth of blood cells.",
+        "treatment": "Treatment may include chemotherapy, radiation therapy, stem cell transplant, targeted therapy, or immunotherapy."
+    },
+    {
+        "name": "Breast Cancer",
+        "category": "Cancer",
+        "description": "A cancer that forms in the cells of the breasts, usually the ducts or lobules. It can occur in both men and women, but it is more common in women.",
+        "treatment": "Treatment may include surgery, chemotherapy, radiation therapy, hormone therapy, targeted therapy, or immunotherapy."
+    },
+    {
+        "name": "Gene Therapy",
+        "category": "Therapy",
+        "description": "A therapeutic technique that involves altering the genes inside an individual's cells to treat or prevent disease.",
+        "treatment": "Treatment involves introducing genetic material into cells to replace missing or malfunctioning genes, or to introduce new functions to the cells."
+    },
+    {
+        "name": "Vitiligo",
+        "category": "Skin Disorder",
+        "description": "A condition in which the skin loses its pigment cells (melanocytes), resulting in irregular white patches of skin.",
+        "treatment": "Treatment may include topical medications, phototherapy, laser therapy, depigmentation, or surgery."
+    },
+    {
+        "name": "Heart Disease",
+        "category": "Cardiovascular Disorder",
+        "description": "A range of conditions that affect the heart's structure and function, including coronary artery disease, heart rhythm problems, and heart defects.",
+        "treatment": "Treatment may include lifestyle changes, medications, medical procedures such as angioplasty or bypass surgery, or implantation of medical devices like pacemakers."
+    },
+    {
+        "name": "Diabetes",
+        "category": "Metabolic Disorder",
+        "description": "A chronic condition characterized by high levels of blood glucose (sugar) due to inadequate production or utilization of insulin.",
+        "treatment": "Treatment may include insulin therapy, oral medications, dietary changes, exercise, and monitoring blood sugar levels."
+    },
+    {
+        "name": "Alzheimer's Disease",
+        "category": "Neurological Disorder",
+        "description": "A progressive brain disorder that gradually destroys memory and cognitive functions, affecting behavior and ability to carry out daily tasks.",
+        "treatment": "Treatment may include medications to manage symptoms, cognitive and behavioral therapies, and support services for patients and caregivers."
+    },
+    {
+        "name": "Depression",
+        "category": "Mental Health Disorder",
+        "description": "A mood disorder characterized by persistent feelings of sadness, hopelessness, and loss of interest in activities, often accompanied by physical symptoms.",
+        "treatment": "Treatment may include therapy (such as cognitive-behavioral therapy or interpersonal therapy), medication, lifestyle changes, and support from loved ones."
+    },
+    {
+        "name": "Asthma",
+        "category": "Respiratory Disorder",
+        "description": "A chronic condition characterized by inflammation and narrowing of the airways, leading to wheezing, shortness of breath, chest tightness, and coughing.",
+        "treatment": "Treatment may include inhaled corticosteroids, bronchodilators, leukotriene modifiers, allergy medications, and lifestyle changes to manage triggers."
+    },
+    {
+        "name": "Obesity",
+        "category": "Metabolic Disorder",
+        "description": "A medical condition characterized by excessive accumulation of body fat, increasing the risk of various health problems such as heart disease, diabetes, and certain cancers.",
+        "treatment": "Treatment may include dietary changes, increased physical activity, behavior modification, medications, or bariatric surgery."
+    },
+    {
+        "name": "Arthritis",
+        "category": "Musculoskeletal Disorder",
+        "description": "A group of disorders characterized by inflammation of the joints, causing pain, stiffness, swelling, and reduced range of motion.",
+        "treatment": "Treatment may include medications (such as NSAIDs or corticosteroids), physical therapy, occupational therapy, lifestyle changes, or surgery."
+    },
+    {
+        "name": "HIV/AIDS",
+        "category": "Immunodeficiency Disorder",
+        "description": "A viral infection that attacks the immune system, leading to progressive weakening of the body's ability to fight infections and diseases.",
+        "treatment": "Treatment may include antiretroviral therapy (ART), which can suppress the virus and prevent transmission, along with medications to prevent and treat opportunistic infections."
+    },
+    {
+        "name": "Stroke",
+        "category": "Neurological Disorder",
+        "description": "A sudden interruption of blood flow to the brain, depriving it of oxygen and nutrients, leading to brain cell damage and potential loss of function.",
+        "treatment": "Treatment may include medications to dissolve blood clots, procedures to remove blockages, rehabilitation therapy, lifestyle changes, and prevention measures."
+    },
+    {
+        "name": "Hypertension",
+        "category": "Cardiovascular Disorder",
+        "description": "High blood pressure, a condition where the force of blood against the artery walls is consistently too high, increasing the risk of heart disease, stroke, and other complications.",
+        "treatment": "Treatment may include lifestyle modifications (such as dietary changes and increased physical activity) and medications (such as ACE inhibitors, beta-blockers, or diuretics)."
+    },
+    {
+        "name": "Osteoporosis",
+        "category": "Musculoskeletal Disorder",
+        "description": "A condition characterized by weakening of bones, making them fragile and more prone to fractures, typically due to loss of bone density.",
+        "treatment": "Treatment may include medications to prevent bone loss and increase bone density, dietary supplements, weight-bearing exercise, and fall prevention measures."
+    },
+    {
+        "name": "Parkinson's Disease",
+        "category": "Neurological Disorder",
+        "description": "A progressive nervous system disorder that affects movement, causing tremors, stiffness, slow movement, and impaired balance and coordination.",
+        "treatment": "Treatment may include medications to manage symptoms, physical therapy, occupational therapy, speech therapy, and surgical interventions like deep brain stimulation."
+    },
+    {
+        "name": "Chronic Kidney Disease",
+        "category": "Renal Disorder",
+        "description": "A condition characterized by gradual loss of kidney function over time, leading to accumulation of waste and fluid in the body, electrolyte imbalances, and other complications.",
+        "treatment": "Treatment may include medications to control blood pressure, manage blood glucose levels, treat complications, dietary changes, and in severe cases, dialysis or kidney transplantation."
+    },
+    {
+        "name": "Glaucoma",
+        "category": "Eye Disorder",
+        "description": "A group of eye conditions that damage the optic nerve, usually due to increased pressure within the eye, leading to gradual loss of vision.",
+        "treatment": "Treatment may include eye drops, oral medications, laser therapy, or surgery to reduce intraocular pressure and preserve vision."
+    },
+    {
+        "name": "Rheumatoid Arthritis",
+        "category": "Autoimmune Disorder",
+        "description": "A chronic inflammatory disorder that affects the joints, causing pain, stiffness, swelling, and potentially joint damage and deformities.",
+        "treatment": "Treatment may include medications (such as disease-modifying antirheumatic drugs or biologics), physical therapy, occupational therapy, lifestyle changes, and surgery."
+    },
+    {
+        "name": "Eczema",
+        "category": "Skin Disorder",
+        "description": "A chronic inflammatory skin condition characterized by dry, itchy skin, redness, and inflammation, often accompanied by rash or blisters.",
+        "treatment": "Treatment may include moisturizers, topical corticosteroids, oral medications, phototherapy, or biologic medications."
+    },
+    {
+        "name": "COPD (Chronic Obstructive Pulmonary Disease)",
+        "category": "Respiratory Disorder",
+        "description": "A group of progressive lung diseases, including emphysema and chronic bronchitis, that obstruct airflow, leading to breathing difficulties.",
+        "treatment": "Treatment may include smoking cessation, medications (such as bronchodilators or steroids), pulmonary rehabilitation, oxygen therapy, or surgery in severe cases."
+    },
+    {
+        "name": "Autism Spectrum Disorder",
+        "category": "Neurodevelopmental Disorder",
+        "description": "A complex neurodevelopmental condition characterized by challenges with social interaction, communication, and repetitive behaviors.",
+        "treatment": "Treatment may include behavioral therapy, speech therapy, occupational therapy, educational interventions, and medications to manage associated symptoms like anxiety or irritability."
+    },
+    {
+        "name": "Endometriosis",
+        "category": "Gynecological Disorder",
+        "description": "A painful disorder in which tissue similar to the tissue that normally lines the inside of the uterus grows outside the uterus, causing inflammation, scarring, and potentially infertility.",
+        "treatment": "Treatment may include medications to relieve pain and inflammation, hormonal therapy, surgery to remove endometrial growths, or assisted reproductive technologies for infertility."
+    }
+]

@@ -1,7 +1,7 @@
 <template>
 	<div class="desktop:p-8 mobile:p-4 bg-white shadow-lg rounded-lg">
 		<div class="mb-6">
-			<h1>Welcome to the ______ Subscription Center</h1>
+			<h1>Welcome to patient Subscription Center</h1>
 			<p class="text-4 mt-2 text-gray-700">
 				Stay up-to-date on Company's content, your way. Sign up for our monthly newsletter and choose to receive
 				alerts as we publish new articles, announcements, features, and podcasts at the frequency you prefer.
@@ -9,7 +9,7 @@
 		</div>
 		<div class="mb-6">
 			<h2 class="text-lg font-semibold mb-2">Contact Information</h2>
-			<div class="grid desktop:grid-cols-2 gap-3 mb-4">
+			<div class="grid desktop:grid-cols-2 gap-3 mb-3">
 				<div>
 					<label class="text-sm my-2 text-gray-600">First name</label>
 					<input
@@ -20,7 +20,7 @@
 					/>
 				</div>
 				<div>
-					<label class="text-sm my-2 text-gray-600">First name</label>
+					<label class="text-sm my-2 text-gray-600">Last name</label>
 					<input
 						type="text"
 						placeholder="Last name"
@@ -29,7 +29,7 @@
 					/>
 				</div>
 			</div>
-			<div>
+			<div class="my-3">
 				<label class="text-sm text-gray-600">Email</label>
 				<input
 					type="email"
@@ -38,146 +38,259 @@
 					v-model="formData.email"
 				/>
 			</div>
-		</div>
-		<div class="mb-6">
-			<h2 class="text-lg font-semibold mb-2">Email Alerts by Topic</h2>
-			<p class="text-4 mt-2 text-gray-700">
-				Choose to receive email alerts only on those topics that are of particular importance to you and select
-				the format of content that you are interested in, at the frequency you prefer.
-			</p>
-
-			<div class="my-4">
-				<label class="inline-flex items-center">
-					<input
-						type="radio"
-						class="form-radio"
-						v-model="formData.topics"
-						value="all"
-					/>
-					<span class="ml-2">All Topics</span>
-				</label>
-				<label class="inline-flex items-center ml-6">
-					<input
-						type="radio"
-						class="form-radio"
-						v-model="formData.topics"
-						value="individual"
-					/>
-					<span class="ml-2">Individual Topics</span>
-				</label>
+			<div>
+				<label class="text-sm text-gray-600">Phone number</label>
+				<input
+					type="number"
+					placeholder="+1 304 5555"
+					class="form-input"
+					v-model="formData.email"
+				/>
 			</div>
+		</div>
 
-			<h2 class="text-lg font-semibold mb-2">Media Types</h2>
+		<div class="mb-6">
+			<h2 class="text-lg font-semibold mb-2">Channel Prefences</h2>
+
+			<div class="flex space-x-4 mb-4">
+				<div class="flex flex-col">
+					<div class="flex items-center">
+						<input
+							type="checkbox"
+							class="form-checkbox"
+							v-model="formData.channelPreferences.email"
+						/>
+						<span class="ml-2">Email</span>
+					</div>
+				</div>
+				<div class="flex flex-col">
+					<div class="flex items-center">
+						<input
+							type="checkbox"
+							class="form-checkbox"
+							v-model="formData.channelPreferences.sms"
+						/>
+						<span class="ml-2">SMS</span>
+					</div>
+				</div>
+				<div class="flex flex-col">
+					<div class="flex items-center">
+						<input
+							type="checkbox"
+							class="form-checkbox"
+							v-model="formData.channelPreferences.directMail"
+						/>
+						<span class="ml-2">Direct mail</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mb-6" v-if="formData.channelPreferences.directMail">
+			<h2 class="text-lg font-semibold mb-2">Direct mail address</h2>
+			<div class="my-3">
+				<label class="text-sm text-gray-600">Address line 1</label>
+				<input
+					type="text"
+					placeholder="300 Waller Street"
+					class="form-input"
+					v-model="formData.address.addressLine1"
+				/>
+			</div>
+			<div class="my-3">
+				<label class="text-sm text-gray-600">Address line 2</label>
+				<input
+					type="text"
+					placeholder="RD"
+					class="form-input"
+					v-model="formData.address.addressLine2"
+				/>
+			</div>
+			<div class="my-3">
+				<label class="text-sm text-gray-600">City</label>
+				<input
+					type="text"
+					placeholder="Los Angeles"
+					class="form-input"
+					v-model="formData.address.city"
+				/>
+			</div>
+			<div class="grid desktop:grid-cols-2 gap-3 mb-3">
+				<div>
+					<label class="text-sm my-2 text-gray-600">State</label>
+					<v-select
+						label="name"
+						placeholder="Select a state"
+						class="text-xs"
+						:reduce="(option) => option.name"
+						v-model="formData.address.state"
+						:options="states"
+						:filterable="false"
+					>
+					</v-select>
+				</div>
+				<div>
+					<label class="text-sm my-2 text-gray-600">Zip code</label>
+					<input
+						type="text"
+						placeholder="90001"
+						class="form-input"
+						v-model="formData.address.zipCode"
+					/>
+				</div>
+			</div>
+		</div>
+
+		<div class="mb-6">
+			<h2 class="text-lg font-semibold mb-2">Topics that you want to get information</h2>
+
+			<div>
+					<v-select
+						label="name"
+						placeholder="Select a topic"
+						class="text-xs"
+						:reduce="(option) => option.name"
+						v-model="formData.topics"
+						multiple
+						:closeOnSelect="false"
+						:options="diseases"
+						:filterable="false"
+						:selectable="(option) => !isSelected(option)"
+					>
+					</v-select>
+				</div>
+		</div>
+
+		<div class="mb-6">
+			<h2 class="text-lg font-semibold mb-2">Communication type</h2>
+			
 			<div class="grid desktop:grid-cols-2 gap-3 mb-4">
 				<div class="flex flex-col">
 					<div class="flex items-center">
 						<input
 							type="checkbox"
 							class="form-checkbox"
-							v-model="formData.mediaTypes.articles"
+							v-model="formData.communicationType.newsletter"
 						/>
-						<span class="ml-2">Articles</span>
+						<span class="ml-2">Newsletter</span>
 					</div>
-					<p class="text-sm my-2 text-gray-700">Partnerships, manufacturing, etc.</p>
 				</div>
 				<div class="flex flex-col">
 					<div class="flex items-center">
 						<input
 							type="checkbox"
 							class="form-checkbox"
-							v-model="formData.mediaTypes.announcements"
+							v-model="formData.communicationType.productSafetyUpdates"
 						/>
-						<span class="ml-2">Announcements</span>
+						<span class="ml-2">Product Safety Updates</span>
 					</div>
-					<p class="text-sm my-2 text-gray-700">News, briefs</p>
 				</div>
 				<div class="flex flex-col">
 					<div class="flex items-center">
 						<input
 							type="checkbox"
 							class="form-checkbox"
-							v-model="formData.mediaTypes.science"
+							v-model="formData.communicationType.events"
 						/>
-						<span class="ml-2">Behind the Science Features</span>
+						<span class="ml-2">Events</span>
 					</div>
-					<p class="text-sm my-2 text-gray-700">Multimedia stories</p>
 				</div>
 				<div class="flex flex-col">
 					<div class="flex items-center">
 						<input
 							type="checkbox"
 							class="form-checkbox"
-							v-model="formData.mediaTypes.podcasts"
+							v-model="formData.communicationType.promotions"
 						/>
-						<span class="ml-2">Podcasts</span>
+						<span class="ml-2">Promotions</span>
 					</div>
-					<p class="text-sm my-2 text-gray-700">Company original streaming audio programs</p>
 				</div>
+				<div class="flex flex-col">
+					<div class="flex items-center">
+						<input
+							type="checkbox"
+							class="form-checkbox"
+							v-model="formData.communicationType.stories"
+						/>
+						<span class="ml-2">Stories</span>
+					</div>
+				</div>
+				<div class="flex flex-col">
+					<div class="flex items-center">
+						<input
+							type="checkbox"
+							class="form-checkbox"
+							v-model="formData.communicationType.surveys"
+						/>
+						<span class="ml-2">Surveys</span>
+					</div>
+				</div>
+	
 			</div>
-		</div>
-		<div class="mb-6">
-			<h2 class="text-lg font-semibold mb-2">Frequency</h2>
-			<label class="inline-flex items-center">
-				<input
-					type="radio"
-					class="form-radio"
-					value="monthly"
-					v-model="formData.frequency"
-				/>
-				<span class="ml-2">Monthly</span>
-			</label>
-			<label class="inline-flex items-center ml-6">
-				<input
-					type="radio"
-					class="form-radio"
-					value="asPublished"
-					v-model="formData.frequency"
-				/>
-				<span class="ml-2">As published</span>
-			</label>
 		</div>
 
 		<div class="flex justify-end">
-			<button @click="subscribe" class="secondary-button">Subscribe</button>
+			<button
+				@click="subscribe"
+				class="secondary-button"
+				>Save my preferences</button
+			>
 		</div>
-
 	</div>
 </template>
   
 <script setup lang="ts">
 import { ref } from 'vue';
 import { FormData } from '@/types/Form';
-import {  push } from 'notivue'
+import { push } from 'notivue';
 import axios from '@/plugins/axios';
+import states from '@/resources/states.json';
+import diseases from '@/resources/diseases.json';
 
 const formData = ref<FormData>({
 	firstName: 'John',
 	lastName: 'Doe',
 	email: 'john.doe@example.com',
-	topics: 'all',
-	mediaTypes: {
-		articles: true,
-		announcements: true,
-		science: true,
-		podcasts: false,
+	channelPreferences: {
+		email: true,
+		sms: true,
+		directMail: true,
 	},
-	frequency: 'asPublished',
+	topics: [],
+	address: {
+		addressLine1: '',
+		addressLine2: '',
+		city: '',
+		state: '',
+		zipCode: '',
+	},
+	communicationType: {
+		newsletter: true,
+		productSafetyUpdates: true,
+		events: true,
+		promotions: true,
+		stories: false,
+		surveys: true,
+	},
 });
 
 const subscribe = async () => {
-  try {
-    const response = await axios.post('/subscription', formData.value);
-    
-    console.log(response); // Log response for debugging
+	try {
+		const response = await axios.post('/subscription', formData.value);
 
-    push.success('Subscription successful! Check your email for confirmation.');
-  } catch (error) {
-    // Log error for debugging
-    console.error(error);
-    push.error('Failed to subscribe. Please try again later.');
-  }
-}
+		console.log(response); // Log response for debugging
 
+		push.success('Subscription successful! Check your email for confirmation.');
+	} catch (error) {
+		// Log error for debugging
+		console.error(error);
+		push.error('Failed to subscribe. Please try again later.');
+	}
+};
+
+const isSelected = (option) => {
+ return formData.value.topics.includes(option.name)
+};
 
 </script>
   

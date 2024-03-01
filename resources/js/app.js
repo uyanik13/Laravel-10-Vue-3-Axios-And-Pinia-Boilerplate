@@ -4,6 +4,7 @@ import { createNotivue } from 'notivue'
 // import { createPinia } from 'pinia'
 import App from '@/App.vue';
 import Router from '@/router/router.js';
+import vSelect from 'vue-select'
 
 
 import 'notivue/notifications.css' // Only needed if using built-in notifications
@@ -21,6 +22,8 @@ const notivue = createNotivue({
   })
 // const pinia = createPinia()
 const app = createApp(App);
+
+app.component('v-select', vSelect)
 app.use(notivue)
 app.use(Router);
 // app.use(pinia)

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import 'vue-select/dist/vue-select.css';
 
 :root {
     --breakpoint-grid_auto-rows: minmax(200px, 1fr);
