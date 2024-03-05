@@ -38,9 +38,6 @@
     @apply text-neutral-10 dark:text-neutral-90
   }
 
-  p {
-    @apply text-neutral-10 dark:text-neutral-90
-  }
   
   .primary-button {
     @apply flex items-center justify-center desktop:w-48 mobile:w-full text-sm font-bold text-neutral-90 transition duration-500 rounded-full bg-primary-50 hover:shadow-sm hover:shadow-black h-10;

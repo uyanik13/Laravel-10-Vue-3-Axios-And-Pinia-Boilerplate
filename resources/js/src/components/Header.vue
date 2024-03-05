@@ -2,12 +2,26 @@
 	<header
 		class="flex flex-row items-center justify-between desktop:p-8 mobile:p-2 bg-white dark:bg-neutralVariant-10 shadow-2xl shadow-gray-200 desktop:h-16"
 	>
-		<router-link to="/">
-			<Logo v-if="!isDark" />
-			<LogoWhite v-if="isDark" />
-		</router-link>
+		<div class="flex space-x-16">
+			<router-link to="/">
+				<Logo v-if="!isDark" />
+				<LogoWhite v-if="isDark" />
+			</router-link>
+			<div class="flex justify-center items-center space-x-2 mobile:hidden">
+				<router-link
+					class="block px-4 py-2 font-semibold text-neutral-10 dark:text-neutral-90 hover:bg-gray-100"
+					to="/"
+					>About Pfizer</router-link
+				>
+				<router-link
+					class="block px-4 py-2 font-semibold text-neutral-10 dark:text-neutral-90 hover:bg-gray-100"
+					to="/"
+					>FAQ</router-link
+				>
+			</div>
+		</div>
 
-		<div class="flex jsutify-center items-center">
+		<div class="flex justify-center items-center">
 			<span
 				:aria-label="isDark ? 'Light Mode' : 'Dark Mode'"
 				@click="toggleDark()"
@@ -24,9 +38,9 @@
 				icon="solar:hamburger-menu-linear"
 				:inline="true"
 				:style="{ fontSize: '32px', color: '#01004E' }"
-				
+				class="desktop:hidden"
 			/>
-			<MobileSideMenu/>	
+			<MobileSideMenu />
 			<DropDownMenu
 				class="mobile:hidden"
 				title="Letizia Lane"
@@ -47,7 +61,6 @@ import { useDark, useToggle } from '@vueuse/core';
 import { Icon } from '@iconify/vue';
 import { useSettingsStore } from '@/stores/settings';
 
-
 const settingsStore = useSettingsStore();
 
 const isDark = useDark();
@@ -67,5 +80,4 @@ const headerMenuItems = computed(() => {
 		},
 	];
 });
-
 </script>

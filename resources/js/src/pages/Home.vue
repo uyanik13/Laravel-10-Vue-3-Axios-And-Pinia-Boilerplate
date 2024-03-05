@@ -54,7 +54,7 @@
 				</div>
 				<span
 					v-if="formData.channelPreferences.sms && !phoneIsValid"
-					class="flex items-center space-x-1 mt-2 font-medium text-error text-xs"
+					class="flex items-center space-x-1 mt-2 font-medium text-error-50 text-xs"
 				>
 					<Icon
 						icon="jam:alert"
