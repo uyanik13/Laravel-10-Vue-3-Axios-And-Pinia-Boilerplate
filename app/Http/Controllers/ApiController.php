@@ -28,6 +28,7 @@ abstract class ApiController extends Controller
 
             return response()->json([
                 'status' => 200,
+                'success' => true,
                 'message' => $message,
                 'data' => $data,
             ], 200);
@@ -50,6 +51,7 @@ abstract class ApiController extends Controller
 
         return response()->json([
             'status' => 200,
+            'success' => true,
             'message' => $message,
             'data' => $data,
         ], 201);
@@ -71,6 +73,7 @@ abstract class ApiController extends Controller
 
         return response()->json([
             'status' => 201,
+            'success' => true,
             'message' => $message,
             'data' => $data,
         ], 201);
@@ -91,6 +94,7 @@ abstract class ApiController extends Controller
 
         $response = [
             'status' => 401,
+            'success' => false,
             'errors' => $errors,
             'data' => $data,
         ];
@@ -121,6 +125,7 @@ abstract class ApiController extends Controller
     $errorMessage = trim($errorMessage);
     $response = [
         'status' => 422,
+        'success' => false,
         'errors' => $errors,
         'message' => $errorMessage ?: 'Unprocessable entity.', // Use the dynamic error message or a default one
         'data' => $data,
@@ -143,6 +148,7 @@ abstract class ApiController extends Controller
 
         $response = [
             'status' => 500,
+            'success' => false,
             'errors' => $errors,
             'data' => $data,
         ];
@@ -165,6 +171,7 @@ abstract class ApiController extends Controller
 
         $response = [
             'status' => 404,
+            'success' => false,
             'errors' => $errors,
             'data' => $data,
         ];
@@ -188,6 +195,7 @@ abstract class ApiController extends Controller
 
         $response = [
             'status' => 403,
+            'success' => false,
             'errors' => $errors,
             'data' => $data,
         ];
@@ -210,6 +218,7 @@ abstract class ApiController extends Controller
 
         $response = [
             'status' => 400,
+            'success' => false,
             'errors' => $errors,
             'data' => $data,
         ];
@@ -232,6 +241,7 @@ abstract class ApiController extends Controller
 
         return response()->json([
             'status' => 201,
+            'success' => true,
             'message' => $message,
             'data' => $data,
         ], 201);

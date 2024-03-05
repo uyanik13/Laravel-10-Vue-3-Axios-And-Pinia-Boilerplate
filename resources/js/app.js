@@ -1,7 +1,7 @@
 import "../sass/app.scss";
 import { createApp } from 'vue';
 import { createNotivue } from 'notivue'
-// import { createPinia } from 'pinia'
+import { createPinia } from 'pinia'
 import App from '@/App.vue';
 import Router from '@/router/router.js';
 import vSelect from 'vue-select'
@@ -20,12 +20,12 @@ const notivue = createNotivue({
       }
     }
   })
-// const pinia = createPinia()
-const app = createApp(App);
 
+const pinia = createPinia()
+const app = createApp(App);
 app.component('v-select', vSelect)
 app.use(notivue)
 app.use(Router);
-// app.use(pinia)
+app.use(pinia)
 
 app.mount('#app');

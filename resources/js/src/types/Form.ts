@@ -18,6 +18,7 @@ export interface FormData {
     firstName: string;
     lastName: string;
     email: string;
+    phoneNumber:string;
     topics:Topic;
     address:Address;
     communicationType: CommunicationType;
