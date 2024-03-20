@@ -6,10 +6,6 @@ export interface ChannelPreferences {
     [key: string]: boolean;
 }
 
-export interface Topic {
-    [key: string]: any[];
-}
-
 export interface Address {
     [key: string]: string;
 }
@@ -19,7 +15,6 @@ export interface FormData {
     lastName: string;
     email: string;
     phoneNumber:string;
-    topics:Topic;
     address:Address;
     communicationType: CommunicationType;
     channelPreferences:ChannelPreferences;

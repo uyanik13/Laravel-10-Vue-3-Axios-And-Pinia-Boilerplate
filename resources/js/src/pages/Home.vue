@@ -9,13 +9,13 @@
 		</div>
 		<div class="mb-6">
 			<h2 class="text-lg font-semibold mb-2">Contact Information</h2>
-			<div class="grid desktop:grid-cols-2 gap-3 mb-3">
+			<div class="grid grid-cols-2 gap-3 mb-3">
 				<div>
 					<label class="text-sm my-2 text-neutral-10 dark:text-neutral-90">First name</label>
 					<input
 						type="text"
 						placeholder="First name"
-						class="form-input"
+						class="form-input-borderless"
 						v-model="formData.firstName"
 					/>
 				</div>
@@ -24,7 +24,7 @@
 					<input
 						type="text"
 						placeholder="Last name"
-						class="form-input"
+						class="form-input-borderless"
 						v-model="formData.lastName"
 					/>
 				</div>
@@ -34,7 +34,7 @@
 				<input
 					type="email"
 					placeholder="john.doe@example.com"
-					class="form-input"
+					class="form-input-borderless"
 					v-model="formData.email"
 				/>
 			</div>
@@ -43,12 +43,13 @@
 				<div class="relative">
 					<Icon
 						icon="mdi-light:phone"
-						class="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500"
+						class="absolute left-1 top-1/2 transform -translate-y-1/2 text-gray-600"
+						:style="{ fontSize: '18px' }"
 					/>
 					<input
 						type="number"
 						placeholder="+1 304 5555"
-						class="form-input-with-icon"
+						class="form-input-borderless-with-icon"
 						v-model="formData.phoneNumber"
 					/>
 				</div>
@@ -112,7 +113,7 @@
 				<input
 					type="text"
 					placeholder="300 Waller Street"
-					class="form-input"
+					class="form-input-borderless"
 					v-model="formData.address.addressLine1"
 				/>
 			</div>
@@ -121,7 +122,7 @@
 				<input
 					type="text"
 					placeholder="RD"
-					class="form-input"
+					class="form-input-borderless"
 					v-model="formData.address.addressLine2"
 				/>
 			</div>
@@ -130,7 +131,7 @@
 				<input
 					type="text"
 					placeholder="Los Angeles"
-					class="form-input"
+					class="form-input-borderless"
 					v-model="formData.address.city"
 				/>
 			</div>
@@ -153,30 +154,10 @@
 					<input
 						type="text"
 						placeholder="90001"
-						class="form-input"
+						class="form-input-borderless"
 						v-model="formData.address.zipCode"
 					/>
 				</div>
-			</div>
-		</div>
-
-		<div class="mb-6">
-			<h2 class="text-lg font-semibold mb-2">Topics that you want to get information</h2>
-
-			<div>
-				<v-select
-					label="name"
-					placeholder="Select a topic"
-					class="text-xs"
-					:reduce="(option) => option.name"
-					v-model="formData.topics"
-					multiple
-					:closeOnSelect="false"
-					:options="diseases"
-					:filterable="false"
-					:selectable="(option) => !isSelected(option)"
-				>
-				</v-select>
 			</div>
 		</div>
 
@@ -254,7 +235,8 @@
 				>Save my preferences
 				<Icon
 					icon="icon-park-outline:right"
-					class="ml-1"
+					class="ml-1 mt-1"
+					:style="{ fontSize: '16px' }"
 			/></button>
 		</div>
 	</div>
@@ -266,7 +248,6 @@ import { FormData } from '@/types/Form';
 import { push } from 'notivue';
 import axios from '@/plugins/axios';
 import states from '@/resources/states.json';
-import diseases from '@/resources/diseases.json';
 import { Icon } from '@iconify/vue';
 import { useRouter } from 'vue-router';
 const router = useRouter()
@@ -282,7 +263,6 @@ const formData = ref<FormData>({
 		sms: true,
 		directMail: true,
 	},
-	topics: [],
 	address: {
 		addressLine1: '',
 		addressLine2: '',

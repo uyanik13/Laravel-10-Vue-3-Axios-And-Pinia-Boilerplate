@@ -10,8 +10,8 @@
 				<h3>Subscription preferences saved.</h3>
 			</div>
 			<div class="flex flex-col justify-center items-center bg-primaryBg rounded-md p-4 desktop:w-4/12 mobile:w-10/12">
-				<p class="text-primaryDark dark:text-neutral-10 font-semibold"> Have questions or need help? </p>
-				<a href="" class="text-primary dark:text-neutral-10"><span class="dark:text-neutral-10 font-semibold">Click here</span> for assistance.</a>
+				<p class="text-primaryDark dark:text-neutral-10 font-bold"> Have questions or need help? </p>
+				<a href="" class="text-[#4C5459] dark:text-neutral-10"><span class="text-[#0000C9] dark:text-neutral-10 font-bold">Click here</span> for assistance.</a>
 			</div>
 		</div>
 	</div>
